@@ -1,6 +1,17 @@
 // npm test
-import {subtract, sum, divide, multiply} from '../sum.js';
+import {subtract, sum, divide, multiply, analyzeArray} from '../sum.js';
 import {capitalize, reverseString} from '../capitalize.js'
+
+
+test('analyze array of numbers', () => {
+    const result = analyzeArray([1, 8, 3, 4, 2,6])
+    expect(result).toEqual({
+        average: 4,
+        min: 1,
+        max: 8,
+        length: 6
+    })
+})
 
 
 test('adds 1 + 2 === 3', () => {
@@ -29,3 +40,5 @@ test('divides 50 / 10 to === 5', () => {
 test('multiply 10 * 5 === 50', () => {
     expect(multiply(10,5)).toBe(50)
 })
+
+
